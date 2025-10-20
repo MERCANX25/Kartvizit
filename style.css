@@ -1,0 +1,96 @@
+/* ------------------- */
+/* Genel sayfa stili   */
+/* ------------------- */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff); /* degrade arka plan */
+  display: flex; /* ortalamak için flex kullanıyoruz */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ekran yüksekliği kadar */
+  margin: 0; /* default margin kaldır */
+}
+
+/* ------------------- */
+/* Kartın stili        */
+/* ------------------- */ 
+.card {
+  background: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 15px; /* köşeleri yuvarla */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* hover animasyonu için */
+}
+
+/* ------------------- */
+/* Hover efekti        */
+/* ------------------- */
+.card:hover {
+  transform: scale(1.05); /* hafif büyüt */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* gölge değiş */
+}
+
+/* ------------------- */
+/* Profil fotoğrafı     */
+/* ------------------- */
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* yuvarlak yap */
+  margin-bottom: 15px;
+  object-fit: cover; /* fotoğrafın orantısını koru */
+}
+
+/* ------------------- */
+/* İsim ve bilgiler    */
+/* ------------------- */
+.card h2 {
+  margin: 10px 0 5px;
+  color: #333;
+  font-size: 1.5em;
+}
+.card p {
+  color: #666;
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+/* ------------------- */
+/* Sosyal medya linkleri */
+/* ------------------- */
+.social a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0077b5; /* mavi LinkedIn rengi */
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.social a:hover {
+  color: #005582; /* hoverda koyu mavi */
+}
+
+/* ------------------- */
+/* Mobil uyumlu stil    */
+/* ------------------- */
+@media (max-width: 400px) {
+  .card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card h2 {
+    font-size: 1.2em;
+  }
+
+  .card p {
+    font-size: 0.9em;
+  }
+}
